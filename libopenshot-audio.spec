@@ -1,9 +1,10 @@
-%define major	6
+%define major	7
 %define libname	%mklibname openshot-audio %{major}
 %define devname	%mklibname openshot-audio -d
 
 Name:		libopenshot-audio
-Version:	2.4.4
+Epoch:		1
+Version:	0.2.0
 Release:	1
 Summary:	OpenShot Audio Library
 License:	GPLv3+
@@ -11,7 +12,7 @@ Group:		System/Libraries
 Url:		http://www.openshot.org/
 Source0:	https://github.com/OpenShot/libopenshot-audio/archive/v%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires:	cmake
+BuildRequires:	cmake ninja
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(freetype2)
@@ -28,6 +29,7 @@ OpenShot Audio Library.
 %package -n	%{libname}
 Summary:	OpenShot Audio Library
 Group:		System/Libraries
+Obsoletes:	%{mklibname openshot-audio 6} < 1:0.0.0-0
 
 %description -n	%{libname}
 OpenShot Audio Library.
@@ -38,9 +40,9 @@ This package contains library files for %{name}.
 %package -n	%{devname}
 Summary:	Development files for %{name}
 Group:		Development/C
-Requires:	%{libname} = %{version}-%{release}
-Provides:	%{name}-devel = %{version}-%{release}
-Provides:	openshot-audio-devel = %{version}-%{release}
+Requires:	%{libname} = %{EVRD}
+Provides:	%{name}-devel = %{EVRD}
+Provides:	openshot-audio-devel = %{EVRD}
 
 %description -n	%{devname}
 The %{devname} package contains libraries and header files for
@@ -58,15 +60,14 @@ This package provides tools and test binaries for %{name}.
 #----------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
+%cmake -G Ninja
 
 %build
-%cmake
-%make_build
+%ninja_build -C build
 
 %install
-%make_install -C build
+%ninja_install -C build
 
 %files
 

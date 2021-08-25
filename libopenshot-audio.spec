@@ -81,6 +81,7 @@ This package provides tools and test binaries for %{name}.
 %{_libdir}/libopenshot-audio.so
 %{_libdir}/cmake/OpenShotAudio/FindASIO.cmake
 %{_libdir}/cmake/OpenShotAudio/OpenShotAudioConfig*
+%{_libdir}/cmake/OpenShotAudio/OpenShotAudioTargets*
 
 %files tools
 %{_bindir}/openshot-audio-demo

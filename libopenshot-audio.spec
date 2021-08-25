@@ -81,5 +81,5 @@ This package provides tools and test binaries for %{name}.
 %{_libdir}/libopenshot-audio.so
 
 %files tools
-%{_bindir}/openshot-audio-test-sound
-%{_mandir}/man1/openshot-audio-test-sound.1*
+#{_bindir}/openshot-audio-test-sound
+#{_mandir}/man1/openshot-audio-test-sound.1*

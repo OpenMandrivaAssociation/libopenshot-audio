@@ -1,10 +1,10 @@
-%define major	7
+%define major	8
 %define libname	%mklibname openshot-audio %{major}
 %define devname	%mklibname openshot-audio -d
 
 Name:		libopenshot-audio
 Epoch:		1
-Version:	0.2.0
+Version:	0.2.1
 Release:	1
 Summary:	OpenShot Audio Library
 License:	GPLv3+
@@ -79,7 +79,9 @@ This package provides tools and test binaries for %{name}.
 %files -n %{devname}
 %{_includedir}/%{name}/
 %{_libdir}/libopenshot-audio.so
+%{_libdir}/cmake/OpenShotAudio/FindASIO.cmake
+%{_libdir}/cmake/OpenShotAudio/OpenShotAudioConfig*
 
 %files tools
-%{_bindir}/openshot-audio-test-sound
-%{_mandir}/man1/openshot-audio-test-sound.1*
+%{_bindir}/openshot-audio-demo
+%{_mandir}/man1/openshot-audio-demo.1.*

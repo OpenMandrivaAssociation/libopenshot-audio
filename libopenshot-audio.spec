@@ -5,7 +5,7 @@
 Name:		libopenshot-audio
 Epoch:		1
 Version:	0.2.2
-Release:	1
+Release:	2
 Summary:	OpenShot Audio Library
 License:	GPLv3+
 Group:		System/Libraries

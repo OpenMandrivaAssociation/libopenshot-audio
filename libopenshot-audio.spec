@@ -1,11 +1,10 @@
-%define major	8
+%define major	9
 %define libname	%mklibname openshot-audio %{major}
 %define devname	%mklibname openshot-audio -d
 
 Name:		libopenshot-audio
-Epoch:		1
-Version:	0.2.2
-Release:	2
+Version:	0.3.0
+Release:	1
 Summary:	OpenShot Audio Library
 License:	GPLv3+
 Group:		System/Libraries
@@ -29,7 +28,7 @@ OpenShot Audio Library.
 %package -n	%{libname}
 Summary:	OpenShot Audio Library
 Group:		System/Libraries
-Obsoletes:	%{mklibname openshot-audio 6} < 1:0.0.0-0
+Obsoletes:	%{mklibname openshot-audio 6} < %{EVRD}
 
 %description -n	%{libname}
 OpenShot Audio Library.

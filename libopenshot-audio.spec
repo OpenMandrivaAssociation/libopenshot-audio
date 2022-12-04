@@ -69,6 +69,7 @@ This package provides tools and test binaries for %{name}.
 %ninja_install -C build
 
 %files
+%{_docdir}/OpenShotAudio/
 
 %files -n %{libname}
 %license AUTHORS COPYING

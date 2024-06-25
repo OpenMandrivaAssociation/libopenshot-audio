@@ -3,7 +3,7 @@
 %define devname	%mklibname openshot-audio -d
 
 Name:		libopenshot-audio
-Version:	0.3.2
+Version:	0.3.3
 Release:	1
 Summary:	OpenShot Audio Library
 License:	GPLv3+

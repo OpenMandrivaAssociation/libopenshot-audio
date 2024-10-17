@@ -8,7 +8,7 @@ Release:	1
 Summary:	OpenShot Audio Library
 License:	GPLv3+
 Group:		System/Libraries
-Url:		http://www.openshot.org/
+Url:		https://www.openshot.org/
 Source0:	https://github.com/OpenShot/libopenshot-audio/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:	cmake ninja

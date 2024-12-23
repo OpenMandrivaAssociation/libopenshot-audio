@@ -1,4 +1,4 @@
-%define major	9
+%define major	10
 %define libname	%mklibname openshot-audio %{major}
 %define devname	%mklibname openshot-audio -d
 
